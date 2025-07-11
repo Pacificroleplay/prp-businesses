@@ -23,8 +23,8 @@ CreateThread(function()
         if v.Storages then 
             for stash = 1, #v.Storages do 
                 local poly = v.Storages[stash]
-                exports['qb-target']:AddBoxZone('ren-business:storages:'..k..stash, poly.pos, poly.length, poly.width, {
-                    name = 'ren-business:storages:'..k..stash,
+                exports['qb-target']:AddBoxZone('prp-business:storages:'..k..stash, poly.pos, poly.length, poly.width, {
+                    name = 'prp-business:storages:'..k..stash,
                     heading = poly.heading,
                     debugPoly = Config.Debug,
                     minZ = poly.minZ,
@@ -32,7 +32,7 @@ CreateThread(function()
                 }, {
                     options = {
                         {
-                            event = 'ren-business:open:storage',
+                            event = 'prp-business:open:storage',
                             icon = 'fas fa-box-open',
                             label = poly.stash.label,
                             job = poly.stash.job,
@@ -47,8 +47,8 @@ CreateThread(function()
         if v.Register then 
             for register = 1, #v.Register do 
                 local poly = v.Register[register]
-                exports['qb-target']:AddBoxZone('ren-business:register:'..k..register, poly.pos, poly.length, poly.width, {
-                    name = 'ren-business:register:'..k..register,
+                exports['qb-target']:AddBoxZone('prp-business:register:'..k..register, poly.pos, poly.length, poly.width, {
+                    name = 'prp-business:register:'..k..register,
                     heading = poly.heading,
                     debugPoly = Config.Debug,
                     minZ = poly.minZ,
@@ -86,8 +86,8 @@ CreateThread(function()
         if v.Craft then 
             for craft = 1, #v.Craft do 
                 local poly = v.Craft[craft]
-                exports['qb-target']:AddBoxZone('ren-business:crafting:'..k..craft, poly.pos, poly.length, poly.width, {
-                    name = 'ren-business:crafting:'..k..craft,
+                exports['qb-target']:AddBoxZone('prp-business:crafting:'..k..craft, poly.pos, poly.length, poly.width, {
+                    name = 'prp-business:crafting:'..k..craft,
                     heading = poly.heading,
                     debugPoly = Config.Debug,
                     minZ = poly.minZ,
@@ -110,8 +110,8 @@ CreateThread(function()
         if v.Outfit then 
             for outfit = 1, #v.Outfit do 
                 local poly = v.Outfit[outfit]
-                exports['qb-target']:AddBoxZone('ren-business:outfits:'..k..outfit, poly.pos, poly.length, poly.width, {
-                    name = 'ren-business:outfits:'..k..outfit,
+                exports['qb-target']:AddBoxZone('prp-business:outfits:'..k..outfit, poly.pos, poly.length, poly.width, {
+                    name = 'prp-business:outfits:'..k..outfit,
                     heading = poly.heading,
                     debugPoly = Config.Debug,
                     minZ = poly.minZ,
@@ -133,8 +133,8 @@ CreateThread(function()
         if v.Duty then 
             for duty = 1, #v.Duty do 
                 local poly = v.Duty[duty]
-                exports['qb-target']:AddBoxZone('ren-business:duty:'..k..duty, poly.pos, poly.length, poly.width, {
-                    name = 'ren-business:duty:'..k..duty,
+                exports['qb-target']:AddBoxZone('prp-business:duty:'..k..duty, poly.pos, poly.length, poly.width, {
+                    name = 'prp-business:duty:'..k..duty,
                     heading = poly.heading,
                     debugPoly = Config.Debug,
                     minZ = poly.minZ,
@@ -156,8 +156,8 @@ CreateThread(function()
         if v.Store then 
             for store = 1, #v.Store do 
                 local poly = v.Store[store]
-                exports['qb-target']:AddBoxZone('ren-business:stores:'..k..store, poly.pos, poly.length, poly.width, {
-                    name = 'ren-business:stores:'..k..store,
+                exports['qb-target']:AddBoxZone('prp-business:stores:'..k..store, poly.pos, poly.length, poly.width, {
+                    name = 'prp-business:stores:'..k..store,
                     heading = poly.heading,
                     debugPoly = Config.Debug,
                     minZ = poly.minZ,

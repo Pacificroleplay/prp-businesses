@@ -52,7 +52,7 @@ RegisterNetEvent('prp-businesses:pay:bill', function(data)
                     txt = "You need to pay "..result.price.."$ for: "..result.reason,
                     params = {
                         isServer = true,
-                        event = "ren-business:pay:bills",
+                        event = "prp-business:pay:bills",
                         args = {
                             type = "bank",
                             job = data.business,
@@ -65,7 +65,7 @@ RegisterNetEvent('prp-businesses:pay:bill', function(data)
                     txt = "You need to pay "..result.price.."$ for: "..result.reason,
                     params = {
                         isServer = true,
-                        event = "ren-business:pay:bills",
+                        event = "prp-business:pay:bills",
                         args = {
                             type = "cash",
                             job = data.business,
@@ -91,7 +91,7 @@ RegisterNetEvent('prp-businesses:delete:bill', function(data)
             QBCore.Functions.Notify('There are no bills to be deleted!', 'error', 6000)
         else 
             QBCore.Functions.Notify('Bill successfully deleted!', 'success', 6000)
-            TriggerServerEvent("ren-business:clear:bill", data)
+            TriggerServerEvent("prp-business:clear:bill", data)
         end
     end, data)
 end)

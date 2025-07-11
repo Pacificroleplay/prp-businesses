@@ -43,7 +43,7 @@ RegisterNetEvent("prp-businesses:craft:item", function(data)
                 flags = 16,
             }, {}, {}, function() 
                 ClearPedTasks(PlayerPedId())
-                TriggerServerEvent('ren-business:craft:item', data)
+                TriggerServerEvent('prp-business:craft:item', data)
             end, function()
                 ClearPedTasks(PlayerPedId())
             end)

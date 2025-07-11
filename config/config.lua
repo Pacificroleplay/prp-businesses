@@ -89,6 +89,20 @@ Config = {
                     maxZ = 25.32--// box zone max height                
                 }
             },
+            DutyZones = {
+                [1] = {
+                    type = 'poly',
+                    points = {
+                       vector3(107.4432, -1044.9065, 28.3389),
+                       vector3(115.4333, -1022.6429, 28.2962),
+                       vector3(131.4482, -1028.1436, 28.3567),
+                       vector3(122.0496, -1052.7964, 28.1934)
+            },
+               minZ = 1.77,
+               maxZ = 84.51,
+               debug = false
+              }
+            },
             Outfit = {--//this is where workers can change into their saved outfits
                 [1] = {--//this means you can add a second and so on
                     pos = vec3(118.0568, -1043.6431, 28.5116),--//location of the box zone
@@ -100,37 +114,8 @@ Config = {
                 }
             },
             Store = {--//this is where workers can buy ingredients
-                [1] = {--//this means you can add a second store and so on
-                    pos = vec3(115.3416, -1041.2957, 29.6648),--//location of the box zone
-                    heading = 0,--//box zone heading
-                    length = 1,--//box zone length
-                    width = 2,--// box zone width
-                    minZ = 21.36,--// box zone min height
-                    maxZ = 23.56,--// box zone max height
-                    label = "Cool Beans ingredient store",--//store label
-                    slots = 30,--//How many slots can the store have
-                    items = {--//store item list
-                        {
-                            name = "phone",--//item spawn name
-                            price = 0,--//item price
-                            amount = 10,--//item amount
-                            info = {},--//item metadata
-                            type = "item",--//item type
-                            slot = 1,--//item slot where it will be placed on the inventory
-                            authorizedJobGrades = {0, 1, 2, 3}--//job grades that can buy this item
-                        },
-                        {
-                            name = "tosti",--//item spawn name
-                            price = 0,--//item price
-                            amount = 10,--//item amount
-                            info = {},--//item metadata
-                            type = "item",--//item type
-                            slot = 2,--//item slot where it will be placed on the inventory
-                            authorizedJobGrades = {0, 1, 2, 3}--//job grades that can buy this item
-                        }                           
-                    }                      
-                }
-            }
+            
+        }
         },
         ['doj'] = {--//key name stands for the business job name
             Blip = {--//blip this is where it shows the business location on the map
@@ -303,6 +288,20 @@ Config = {
                     maxZ = 25.32--// box zone max height                
                 }
             },
+            DutyZones = {
+                [1] = {
+                    type = 'poly',
+                    points = {
+                       vector3(-581.4651, -609.039, 33.6819),
+                       vector3(-581.3896, -619.2872, 33.6821),
+                       vector3(-591.514, -620.8328, 33.6821),
+                       vector3(-591.6956, -607.0953, 33.6803)
+            },
+               minZ = 1.77,
+               maxZ = 84.51,
+               debug = false
+              }
+            },
             Outfit = {--//this is where workers can change into their saved outfits
                 
             },
@@ -394,6 +393,20 @@ Config = {
                     minZ = 21.32,--// box zone min height
                     maxZ = 25.32--// box zone max height                
                 }
+            },
+            DutyZones = {
+                [1] = {
+                    type = 'poly',
+                    points = {
+                       vector3(-1382.2441, -576.8668, 29.0352),
+                       vector3(-1421.1448, -597.972, 29.4649),
+                       vector3(-1398.0793, -654.2139, 27.674),
+                       vector3(-1345.8689, -623.9476, 26.9309)
+            },
+               minZ = 1.77,
+               maxZ = 84.51,
+               debug = false
+              }
             },
             Outfit = {--//this is where workers can change into their saved outfits
                 
@@ -494,6 +507,23 @@ Config = {
                     minZ = 21.32,--// box zone min height
                     maxZ = 25.32--// box zone max height                
                 }
+            },
+            DutyZones = {
+                [1] = {
+                    type = 'poly',
+                    points = {
+                       vector3(-1032.2301, -258.8653, 36.7343),
+                       vector3(-991.4983, -237.6246, 36.6649),
+                       vector3(-940.3844, -262.0379, 38.124),
+                       vector3(-950.5555, -269.4099, 37.8562),
+                       vector3(-994.273, -291.6486, 36.8508),
+                       vector3(-980.8222, -317.8919, 36.7457),
+                       vector3(-999.2908, -327.4464, 36.7779)
+            },
+               minZ = 1.77,
+               maxZ = 84.51,
+               debug = false
+              }
             },
             Outfit = {--//this is where workers can change into their saved outfits
                 
@@ -602,6 +632,20 @@ Config = {
                     maxZ = 25.32--// box zone max height                
                 }
             },
+            DutyZones = {
+                [1] = {
+                    type = 'poly',
+                    points = {
+                       vector3(1517.4263, 3750.8801, 33.3431),
+                       vector3(1565.3062, 3783.8716, 33.5156),
+                       vector3(1550.5155, 3810.7183, 31.3339),
+                       vector3(1500.6262, 3782.9387, 31.4533)
+            },
+               minZ = 1.77,
+               maxZ = 84.51,
+               debug = false
+              }
+            },
             Outfit = {--//this is where workers can change into their saved outfits
                 
             },
@@ -709,6 +753,21 @@ Config = {
                     maxZ = 25.32--// box zone max height                
                 }
             },
+            DutyZones = {
+                [1] = {
+                    type = 'poly',
+                    points = {
+                       vector3(-569.8397, 275.6465, 81.9612),
+                       vector3(-551.9001, 273.2951, 81.9954),
+                       vector3(-548.1913, 275.1252, 81.9858),
+                       vector3(-547.3118, 295.5594, 82.0204),
+                       vector3(-566.7463, 299.5345, 82.0368)
+            },
+               minZ = 1.77,
+               maxZ = 84.51,
+               debug = false
+              }
+            },
             Outfit = {--//this is where workers can change into their saved outfits
                 
             },
@@ -749,6 +808,20 @@ Config = {
                     minZ = 21.32,--// box zone min height
                     maxZ = 25.32--// box zone max height                
                 }
+            },
+            DutyZones = {
+                [1] = {
+                    type = 'poly',
+                    points = {
+                       vector3(-59.5578, 58.2907, 71.0825),
+                       vector3(-115.6704, 89.4036, 70.2546),
+                       vector3(-108.7701, 111.1811, 73.0679),
+                       vector3(-44.3973, 84.5284, 73.5602)
+            },
+               minZ = 1.77,
+               maxZ = 84.51,
+               debug = false
+              }
             },
             Outfit = {--//this is where workers can change into their saved outfits
                 

@@ -10,7 +10,7 @@ QBCore.Functions.CreateCallback('prp-businesses:can:craft:item', function(source
     cb(false)
 end)
 
-RegisterNetEvent('ren-business:craft:item', function(data)
+RegisterNetEvent('prp-business:craft:item', function(data)
     local pData = QBCore.Functions.GetPlayer(source)
 
     if HasCraftItems(source, data.required) then         

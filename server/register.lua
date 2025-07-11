@@ -41,7 +41,7 @@ QBCore.Functions.CreateCallback('prp-businesses:get:bill:data', function(source,
     cb(false)
 end)
 
-RegisterNetEvent('ren-business:pay:bills', function(data)
+RegisterNetEvent('prp-business:pay:bills', function(data)
     local bill = Bills[data.job..data.register]
     local pData = QBCore.Functions.GetPlayer(source)
     local dWorker = QBCore.Functions.GetPlayerByCitizenId(bill.biller)
@@ -64,7 +64,7 @@ RegisterNetEvent('ren-business:pay:bills', function(data)
     end 
 end)
 
-RegisterNetEvent('ren-business:clear:bill', function(data)
+RegisterNetEvent('prp-business:clear:bill', function(data)
     local pData = QBCore.Functions.GetPlayer(source)
 
     print(json.encode(data))
