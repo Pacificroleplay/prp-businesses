@@ -1,8 +1,21 @@
-Config = {
-    AlowCuts = false,--// if this is true this means that all businesses have to take a cut from a employee sale
-    PayoutSplit = 0,--// the cut procentage what the business takes and the rest is left for the employee
-    Debug = false,--//if true it will enable polyzone debug
-    businesses = {
+Config = {}
+
+Config.AlowCuts     = false
+Config.PayoutSplit  = 0
+Config.Debug        = false
+
+    Config.TaskSettings = {
+    resetMinutes = 120,
+    defaultPayout = 25,
+}
+
+Config.TaskAnims = {
+    sweep  = {dict = "anim@amb@drug_field_workers@rake@male_a@base", name = "base"},
+    washup = {dict = "timetable@floyd@clean_kitchen@base", name = "base"},
+    valet  = {dict = "amb@world_human_maid_clean@", name = "base"},
+}
+
+Config.businesses = {
         --//Default preset business
         ['beanmachine'] = {--//key name stands for the business job name
             Blip = {--//blip this is where it shows the business location on the map
@@ -93,10 +106,10 @@ Config = {
                 [1] = {
                     type = 'poly',
                     points = {
-                       vector3(107.4432, -1044.9065, 28.3389),
-                       vector3(115.4333, -1022.6429, 28.2962),
-                       vector3(131.4482, -1028.1436, 28.3567),
-                       vector3(122.0496, -1052.7964, 28.1934)
+                       vec3(107.4432, -1044.9065, 28.3389),
+                       vec3(115.4333, -1022.6429, 28.2962),
+                       vec3(131.4482, -1028.1436, 28.3567),
+                       vec3(122.0496, -1052.7964, 28.1934)
             },
                minZ = 1.77,
                maxZ = 84.51,
@@ -292,10 +305,10 @@ Config = {
                 [1] = {
                     type = 'poly',
                     points = {
-                       vector3(-581.4651, -609.039, 33.6819),
-                       vector3(-581.3896, -619.2872, 33.6821),
-                       vector3(-591.514, -620.8328, 33.6821),
-                       vector3(-591.6956, -607.0953, 33.6803)
+                       vec3(-581.4651, -609.039, 33.6819),
+                       vec3(-581.3896, -619.2872, 33.6821),
+                       vec3(-591.514, -620.8328, 33.6821),
+                       vec3(-591.6956, -607.0953, 33.6803)
             },
                minZ = 1.77,
                maxZ = 84.51,
@@ -322,6 +335,23 @@ Config = {
             Register = {--//register where workers can write bills and players can pay them
                 
             },
+            TaskBoard = {
+            label  = "View Business Tasks",
+            coords = vec3(-1370.6206, -625.2988, 30.561), -- location inside Bean Machine
+            icon   = "fas fa-clipboard-list",
+            },
+            Tasks = {
+    washDishes = {
+        label  = "Wash dishes",
+        payout = 35,
+        repeatsRequired = 5,
+        anim   = Config.TaskAnims.washup,
+        spots  = {
+            {pos = vec3(-1403.0225, -597.9731, 30.373), length = 1.0, width = 1.0, heading = 0.0,
+             minZ = 28.4, maxZ = 29.2},
+        }
+    }
+},
             Storages = {--//storages this where you can store youre items
                 [1] = {--this means you can add a second storage and so on
                     pos = vec3(-1403.7325, -598.8135, 29.9768),--//location of the box zone
@@ -398,10 +428,10 @@ Config = {
                 [1] = {
                     type = 'poly',
                     points = {
-                       vector3(-1382.2441, -576.8668, 29.0352),
-                       vector3(-1421.1448, -597.972, 29.4649),
-                       vector3(-1398.0793, -654.2139, 27.674),
-                       vector3(-1345.8689, -623.9476, 26.9309)
+                       vec3(-1382.2441, -576.8668, 29.0352),
+                       vec3(-1421.1448, -597.972, 29.4649),
+                       vec3(-1398.0793, -654.2139, 27.674),
+                       vec3(-1345.8689, -623.9476, 26.9309)
             },
                minZ = 1.77,
                maxZ = 84.51,
@@ -512,13 +542,13 @@ Config = {
                 [1] = {
                     type = 'poly',
                     points = {
-                       vector3(-1032.2301, -258.8653, 36.7343),
-                       vector3(-991.4983, -237.6246, 36.6649),
-                       vector3(-940.3844, -262.0379, 38.124),
-                       vector3(-950.5555, -269.4099, 37.8562),
-                       vector3(-994.273, -291.6486, 36.8508),
-                       vector3(-980.8222, -317.8919, 36.7457),
-                       vector3(-999.2908, -327.4464, 36.7779)
+                       vec3(-1032.2301, -258.8653, 36.7343),
+                       vec3(-991.4983, -237.6246, 36.6649),
+                       vec3(-940.3844, -262.0379, 38.124),
+                       vec3(-950.5555, -269.4099, 37.8562),
+                       vec3(-994.273, -291.6486, 36.8508),
+                       vec3(-980.8222, -317.8919, 36.7457),
+                       vec3(-999.2908, -327.4464, 36.7779)
             },
                minZ = 1.77,
                maxZ = 84.51,
@@ -545,6 +575,23 @@ Config = {
             Register = {--//register where workers can write bills and players can pay them
                 
             },
+            TaskBoard = {
+            label  = "View Business Tasks",
+            coords = vec3(1531.5215, 3784.7617, 34.8517), -- location inside Bean Machine
+            icon   = "fas fa-clipboard-list",
+            },
+            Tasks = {
+    washDishes = {
+        label  = "Wash dishes",
+        payout = 35,
+        repeatsRequired = 5,
+        anim   = Config.TaskAnims.washup,
+        spots  = {
+            {pos = vec3(1543.2888, 3794.7871, 34.5272), length = 1.0, width = 1.0, heading = 0.0,
+             minZ = 28.4, maxZ = 29.2},
+        }
+    }
+},
             Storages = {--//storages this where you can store youre items
                 [1] = {--this means you can add a second storage and so on
                     pos = vec3(1539.8093, 3790.7285, 34.6175),--//location of the box zone
@@ -636,10 +683,10 @@ Config = {
                 [1] = {
                     type = 'poly',
                     points = {
-                       vector3(1517.4263, 3750.8801, 33.3431),
-                       vector3(1565.3062, 3783.8716, 33.5156),
-                       vector3(1550.5155, 3810.7183, 31.3339),
-                       vector3(1500.6262, 3782.9387, 31.4533)
+                       vec3(1517.4263, 3750.8801, 33.3431),
+                       vec3(1565.3062, 3783.8716, 33.5156),
+                       vec3(1550.5155, 3810.7183, 31.3339),
+                       vec3(1500.6262, 3782.9387, 31.4533)
             },
                minZ = 1.77,
                maxZ = 84.51,
@@ -757,13 +804,12 @@ Config = {
                 [1] = {
                     type = 'poly',
                     points = {
-                       vector3(-569.8397, 275.6465, 81.9612),
-                       vector3(-551.9001, 273.2951, 81.9954),
-                       vector3(-548.1913, 275.1252, 81.9858),
-                       vector3(-547.3118, 295.5594, 82.0204),
-                       vector3(-566.7463, 299.5345, 82.0368)
+                       vec3(-580.6906, 273.7152, 81.6169),
+                       vec3(-546.7377, 269.529, 81.863),
+                       vec3(-544.5362, 302.2127, 82.0204),
+                       vec3(-581.6122, 324.0979, 83.845)
             },
-               minZ = 1.77,
+               minZ = -80.77,
                maxZ = 84.51,
                debug = false
               }
@@ -799,6 +845,35 @@ Config = {
                     }
                 }
             },
+            TaskBoard = {
+            label  = "View Business Tasks",
+            coords = vec3(-68.7276, 78.3681, 71.5371), -- location inside Bean Machine
+            icon   = "fas fa-clipboard-list",
+            },
+            Tasks = {
+    polishVehices = {
+        label  = "Polish Vehicles",
+        payout = 35,
+        repeatsRequired = 5,
+        anim   = Config.TaskAnims.valet,
+        spots  = {
+            {pos = vec3(-75.4565, 73.0876, 71.8895), length = 1.0, width = 1.0, heading = 0.0,
+             minZ = 28.4, maxZ = 29.2},
+            {pos = vec3(-78.2016, 75.1873, 71.6024), length = 1.0, width = 1.0, heading = 0.0,
+             minZ = 28.4, maxZ = 29.2},
+             {pos = vec3(-81.0705, 77.0015, 71.9765), length = 1.0, width = 1.0, heading = 0.0,
+             minZ = 28.4, maxZ = 29.2},
+             {pos = vec3(-68.3483, 68.6256, 71.6268), length = 1.0, width = 1.0, heading = 0.0,
+             minZ = 28.4, maxZ = 29.2},
+             {pos = vec3(-65.2682, 67.1044, 71.7577), length = 1.0, width = 1.0, heading = 0.0,
+             minZ = 28.4, maxZ = 29.2},
+             {pos = vec3(-62.4645, 65.8394, 71.6422), length = 1.0, width = 1.0, heading = 0.0,
+             minZ = 28.4, maxZ = 29.2},
+             {pos = vec3(-55.3389, 75.354, 71.8159), length = 1.0, width = 1.0, heading = 0.0,
+             minZ = 28.4, maxZ = 29.2},
+        }
+    }
+},
             Duty = {--//this is where your workers can change there duty
                 [1] = {--this means you can add a second duty and so on
                     pos = vec3(-68.6982, 78.3603, 71.5371),--//location of the box zone
@@ -813,10 +888,10 @@ Config = {
                 [1] = {
                     type = 'poly',
                     points = {
-                       vector3(-59.5578, 58.2907, 71.0825),
-                       vector3(-115.6704, 89.4036, 70.2546),
-                       vector3(-108.7701, 111.1811, 73.0679),
-                       vector3(-44.3973, 84.5284, 73.5602)
+                       vec3(-59.5578, 58.2907, 71.0825),
+                       vec3(-115.6704, 89.4036, 70.2546),
+                       vec3(-108.7701, 111.1811, 73.0679),
+                       vec3(-44.3973, 84.5284, 73.5602)
             },
                minZ = 1.77,
                maxZ = 84.51,
@@ -831,4 +906,3 @@ Config = {
             }
         }
     }
-}

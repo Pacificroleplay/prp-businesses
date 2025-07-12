@@ -3,7 +3,9 @@ game 'gta5'
 
 lua54 'yes'
 
-dependency 'ox_lib'
+author 'BevanDoooooo'
+description 'PacificRP 3.0 Businesses'
+version '1.0'
 
 client_scripts {
     '@ox_lib/init.lua',
